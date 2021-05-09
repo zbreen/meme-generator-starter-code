@@ -4,6 +4,13 @@ from abc import ABC, abstractmethod
 from typing import List
 from QuoteModel import QuoteModel
 
+ingestible = {
+    "TEXT": ".txt",
+    "CSV": ".csv",
+    "PDF": ".pdf",
+    "DOCX": ".docx",
+}
+
 class IngestorInterface:
     """A class that sees whether a file is ingestible,
     parses depending on filetype.
