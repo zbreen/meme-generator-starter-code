@@ -2,8 +2,8 @@
 from typing import List
 import docx
 
-from QuoteModel import QuoteModel
-from IngestorInterface import IngestorInterface
+from .QuoteModel import QuoteModel
+from .IngestorInterface import IngestorInterface
 
 
 class DocxIngestor(IngestorInterface):
