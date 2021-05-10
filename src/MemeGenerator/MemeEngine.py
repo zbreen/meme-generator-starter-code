@@ -30,7 +30,8 @@ class MemeEngine():
 
         if text is not None:
             draw = ImageDraw.Draw(img)
-            draw.text((5, 5), f'"{text}" - {author}', font = "arial", align = "center")
+            font = ImageFont.truetype('./fonts/LilitaOne-Regular.ttf',size=20)
+            draw.text((5, 5), f'"{text}" - {author}', font, align = "center")
         rand_num = random.randint(0, 1000)
         out_file = os.path.join(self.output_dir, f'/{rand_num}.jpg')
         img.save(out_file)
