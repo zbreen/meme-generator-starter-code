@@ -1,5 +1,5 @@
 """Test the code."""
-from Ingestor import Ingestor
+from .Ingestor import Ingestor
 
 quotes = ['../_data/DogQuotes/DogQuotesTXT.txt',
           '../_data/DogQuotes/DogQuotesDOCX.docx',
