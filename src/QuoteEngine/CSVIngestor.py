@@ -1,8 +1,8 @@
 """An ingestor for reading csv files."""
 import pandas as pd
 
-from QuoteModel import QuoteModel
-from IngestorInterface import IngestorInterface
+from .QuoteModel import QuoteModel
+from .IngestorInterface import IngestorInterface
 
 
 class CSVIngestor(IngestorInterface):
