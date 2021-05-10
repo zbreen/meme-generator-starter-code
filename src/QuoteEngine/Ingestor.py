@@ -1,11 +1,11 @@
 """The file that determines which ingestor to use."""
 import os
 
-from IngestorInterface import IngestorInterface
-from TextIngestor import TextIngestor
-from DocxIngestor import DocxIngestor
-from PDFIngestor import PDFIngestor
-from CSVIngestor import CSVIngestor
+from .IngestorInterface import IngestorInterface
+from .TextIngestor import TextIngestor
+from .DocxIngestor import DocxIngestor
+from .PDFIngestor import PDFIngestor
+from .CSVIngestor import CSVIngestor
 
 ingestible = {
     "TEXT": ".txt",
