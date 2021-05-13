@@ -17,5 +17,5 @@ MemeGenerator
 
 Src (app.py and meme.py)
 -These files combine the QuoteEngine and the MemeGenerator in order to properly create a meme.
--app.py randomizes which among the files are selected for meme generation.
--meme.py allows the user the ability to choose the meme, body, and quote themselves. 
+-app.py randomizes which among the files are selected for meme generation. It is utilized via the files in templates.
+-meme.py allows the user the ability to choose the meme, body, and quote themselves. People can utilize it via inputting the bash command "python meme.py" (this way produces a random meme) or by adding onto the command a filepath, the quote, and the author name.
