@@ -5,13 +5,16 @@ import random
 
 from PIL import Image, ImageFont, ImageDraw
 
+
 class MemeEngine():
     """Put the text on the image."""
+
     # https://www.geeksforgeeks.org/python-pil-imagedraw-draw-text/
     # https://pillow.readthedocs.io/en/stable/reference/ImageDraw.html
+    # https://knowledge.udacity.com/questions/578191
 
     def __init__(self, output_dir):
-        """initialize the variables."""
+        """Initialize the variables."""
         self.output_dir = output_dir
 
         if not os.path.exists(output_dir):
@@ -30,9 +33,11 @@ class MemeEngine():
 
         if text is not None:
             draw = ImageDraw.Draw(img)
-            font = ImageFont.truetype('./fonts/LilitaOne-Regular.ttf',size=20)
-            draw.text((5, 5), f'"{text}" - {author}', font = font, fill = 'white')
+            trueFont = ImageFont.truetype('./fonts/LilitaOne-Regular.ttf',
+                                          size=20)
+            draw.text((5, 5), f'"{text}" - {author}', font=trueFont,
+                      fill='white')
         rand_num = random.randint(0, 1000)
-        out_file = os.path.join(self.output_dir, f'/{rand_num}.jpg')
+        out_file = os.path.join(self.output_dir, f'./{rand_num}.jpg')
         img.save(out_file)
         return out_file
