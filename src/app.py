@@ -16,9 +16,9 @@ meme = MemeEngine('./static')
 def setup():
     """Load all resources."""
     files = ['./_data/DogQuotes/DogQuotesTXT.txt',
-              './_data/DogQuotes/DogQuotesDOCX.docx',
-              './_data/DogQuotes/DogQuotesPDF.pdf',
-              './_data/DogQuotes/DogQuotesCSV.csv']
+             './_data/DogQuotes/DogQuotesDOCX.docx',
+             './_data/DogQuotes/DogQuotesPDF.pdf',
+             './_data/DogQuotes/DogQuotesCSV.csv']
 
     quotes = []
 
@@ -57,13 +57,6 @@ def meme_form():
 @app.route('/create', methods=['POST'])
 def meme_post():
     """Create a user defined meme."""
-    # @TODO:
-    # 1. Use requests to save the image from the image_url
-    #    form param to a temp local file.
-    # 2. Use the meme object to generate a meme using this temp
-    #    file and the body and author form paramaters.
-    # 3. Remove the temporary saved image.
-
     image_url = request.form.get('image_url')
     body = request.form.get('body')
     author = request.form.get('author', "No one")
