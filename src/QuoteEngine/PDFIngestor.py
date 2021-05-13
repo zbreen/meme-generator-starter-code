@@ -9,6 +9,7 @@ from .IngestorInterface import IngestorInterface
 
 class PDFIngestor(IngestorInterface):
     """The class that ingests info from pdf."""
+
     # https://knowledge.udacity.com/questions/572306
 
     @classmethod
@@ -27,9 +28,7 @@ class PDFIngestor(IngestorInterface):
                     quotes.append(q)
             file_ref.close()
             os.remove(tmp)
-            print(quotes)
+            # print(quotes)
         except Exception as e:
             raise Exception("pdf parsing issue occured.")
         return quotes
-
-
