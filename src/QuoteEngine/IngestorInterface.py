@@ -11,7 +11,7 @@ ingestible = {
     "DOCX": ".docx",
 }
 
-class IngestorInterface:
+class IngestorInterface(ABC):
     """A class that sees whether a file is ingestible,
     parses depending on filetype.
     """
@@ -23,6 +23,7 @@ class IngestorInterface:
 
     # this is to be overwritten
     @classmethod
+    @abstractmethod
     def parse(clr, path: str) -> List[QuoteModel]:
         """Get info from the file.
 
